@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ubuntu-touch-builds
-          path: ubuntu_touch_enuma/out/*.zip
+          path: ubuntu_touch_enuma/out/*.tar.xz
