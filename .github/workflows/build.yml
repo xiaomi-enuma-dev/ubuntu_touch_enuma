@@ -1,0 +1,29 @@
+name: UBPorts Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git wget
+
+      - name: Clone UBPorts repo
+        run: |
+          git clone https://https://github.com/xiaomi-enuma-dev/ubuntu_touch_enuma
+
+      - name: Run build
+        run: |
+          cd ubuntu_touch_enuma
+          ./build.sh -b workdir
+
+      - name: Upload Build ZIPs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ubuntu-touch-builds
+          path: ubuntu_touch_enuma/out/*.zip
