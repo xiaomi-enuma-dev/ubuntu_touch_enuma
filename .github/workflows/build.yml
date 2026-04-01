@@ -15,7 +15,7 @@ jobs:
 
       - name: Clone UBPorts repo
         run: |
-          git clone https://https://github.com/xiaomi-enuma-dev/ubuntu_touch_enuma
+          git clone https://github.com/xiaomi-enuma-dev/ubuntu_touch_enuma
 
       - name: Run build
         run: |
