@@ -11,7 +11,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y git wget python2
+          sudo apt-get install android-tools-mkbootimg bc bison build-essential ca-certificates cpio curl device-tree-compiler fakeroot flex git kmod libssl-dev libtinfo5 python2 sudo unzip wget xz-utils zstd -y --no-install-recommends
           sudo ln -sf /usr/bin/python2 /usr/bin/python
 
       - name: Clone UBPorts repo
