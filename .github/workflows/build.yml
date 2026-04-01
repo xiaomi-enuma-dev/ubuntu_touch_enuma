@@ -5,13 +5,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y git wget
+          sudo apt-get install -y git wget python2
+          sudo ln -sf /usr/bin/python2 /usr/bin/python
 
       - name: Clone UBPorts repo
         run: |
